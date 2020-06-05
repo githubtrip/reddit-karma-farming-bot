@@ -15,8 +15,8 @@ from logger import log
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DB_DIR = os.path.join(BASE_DIR, "brains")
 MAIN_DB = os.path.join(BASE_DIR, "brains/brain.db")
-MAIN_DB_MIN_SIZE = "50mb"
-MAIN_DB_MAX_SIZE = "300mb"
+MAIN_DB_MIN_SIZE = "150mb"
+MAIN_DB_MAX_SIZE = "10000mb"
 #MAIN_DB = DB_DIR + "/brain.db"
 SCORE_THRESHOLD = 0  # downvote
 TOP_SUBREDDIT_NUM = 10  # number of subreddits to search for repost-able content
