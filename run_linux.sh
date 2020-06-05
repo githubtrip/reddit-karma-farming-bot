@@ -33,7 +33,6 @@ if [ ! -d "$DIR/venv" ]; then
       pkg-config \
       wget \
       tmux \
-      python3.6 \
       python3-pip \
       python3-setuptools \
       python3-dev \
@@ -48,6 +47,8 @@ if [ ! -d "$DIR/venv" ]; then
     source venv/bin/activate
     pip3 install cython
     pip3 install -r ./src/requirements.txt || { echo 'Installing python deps failed' | tee -a $DEBUG_FILE ; exit 1; }
+    rm /opt/venv/lib/python3.7/site-packages/praw/const.py
+    mv const.py /opt/venv/lib/python3.7/site-packages/praw/
   fi
 
 fi
