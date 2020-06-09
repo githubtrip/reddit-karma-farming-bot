@@ -24,6 +24,7 @@ MIN_SCORE = 0  # for posts to repost
 SUBMISSION_SEARCH_TEMPLATE = "https://api.pushshift.io/reddit/search/submission/?after={after}&before={before}&sort_type=score&sort=desc&subreddit={subreddit}"
 DAY = 86400  # POSIX day (exact value)
 MINUTE = 60
+#PROBABILITIES = {"REPLY": 0, "SUBMISSION": 0, "SHADOWCHECK": 0, "LEARN": 1, "DELETE": 0}
 PROBABILITIES = {"REPLY": 0.02, "SUBMISSION": 0.005, "SHADOWCHECK": 0.002, "LEARN": 0.02, "DELETE": 0.02}
 MAX_CACHE_SIZE = 128
 NUMBER_DAYS_FOR_POST_TO_BE_OLD = 365
@@ -41,8 +42,21 @@ SHOW_SLEEP_LOGGING = True
 # the sub tuples should be a start time, annd stop time
 # using (hours, minutes) as a 24h clock
 BOT_SCHEDULES = [
-  ((4,00),(5,00)),
-  ((9,30),(23,20)),
+  ((1,35),(2,5)),
+  ((3,5),(3,35)),
+  ((4,35),(5,15)),
+  ((6,35),(7,5)),
+  ((8,5),(8,35)),
+  ((9,35),(10,5)),
+  ((11,5),(11,35)),
+  ((12,35),(13,5)),
+  ((14,5),(14,35)),
+  ((15,35),(16,5)),
+  ((17,5),(17,35)),
+  ((18,35),(19,5)),
+  ((20,5),(20,35)),
+  ((21,35),(22,5)),
+  ((23,5),(23,35)),
   ]
 
 SCHEDULES = []
